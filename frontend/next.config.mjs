@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+// CloudFrontの仕様に合わせてtrailingSlashをtrueにする
+const nextConfig = {
+  reactStrictMode: true,
+  trailingSlash: true,
+  output: 'export',
+};
 
 export default nextConfig;
