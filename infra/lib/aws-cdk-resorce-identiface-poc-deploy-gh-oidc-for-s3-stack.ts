@@ -3,7 +3,7 @@ import { Construct } from "constructs";
 
 const GITHUB_OWNER = "ryosuke-horie";
 const GITHUB_REPO = "identiface-poc";
-const CDK_QUALIFIER = "hnb659fds"; // 既定値
+const CDK_QUALIFIER = "hnb659fds"; // 既定値*変えなくても動く
 const S3_BUCKET_NAME = "infrastack-idenfifaces3bucket83b79824-6ttlx45xmxw0";
 const CLOUDFRONT_DISTRIBUTION_ID = "E1PPUO0EHG05SG";
 
@@ -100,16 +100,10 @@ export class CdkDeployGhOidcStack extends Stack {
 				new aws_iam.PolicyStatement({
 					effect: aws_iam.Effect.ALLOW,
 					actions: [
-						"cloudfront:GetDistribution",
-						"cloudfront:GetDistributionConfig",
-						"cloudfront:ListDistributions",
-						"cloudfront:ListStreamingDistributions",
-						"cloudfront:CreateInvalidation",
-						"cloudfront:ListInvalidations",
-						"cloudfront:GetInvalidation",
+						"cloudfront:*"
 					],
 					resources: [
-						`arn:aws:cloudfront::851725614224:distribution/${CLOUDFRONT_DISTRIBUTION_ID}`,
+						`arn:aws:cloudfront::${accountId}:distribution/${CLOUDFRONT_DISTRIBUTION_ID}`,
 					],
 				}),
 			],
