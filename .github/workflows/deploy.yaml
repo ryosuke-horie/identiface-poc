@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - "frontend/**"
-      - ".github/workflows/deploy.yml"
+      - ".github/workflows/deploy.yaml"
 
 env:
   NODE_VERSION: "18"
