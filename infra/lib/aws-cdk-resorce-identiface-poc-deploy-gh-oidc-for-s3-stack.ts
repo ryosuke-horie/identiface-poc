@@ -4,8 +4,8 @@ import { Construct } from "constructs";
 const GITHUB_OWNER = "ryosuke-horie";
 const GITHUB_REPO = "identiface-poc";
 const CDK_QUALIFIER = "hnb659fds"; // 既定値
-const S3_BUCKET_NAME = "";
-const CLOUDFRONT_DISTRIBUTION_ID = "";
+const S3_BUCKET_NAME = "infrastack-idenfifaces3bucket83b79824-6ttlx45xmxw0";
+const CLOUDFRONT_DISTRIBUTION_ID = "E1PPUO0EHG05SG";
 
 /**
  * @description GitHub Actions によるデプロイを許可する OIDC プロバイダーを作成する。
