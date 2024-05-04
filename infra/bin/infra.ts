@@ -4,7 +4,7 @@ import * as cdk from 'aws-cdk-lib';
 import { CdkDeployGhOidcStack, InfraStack } from '../lib/index';
 
 // デプロイ先のアカウントとリージョン
-const env = { account: '905418074681', region: 'ap-northeast-1' };
+const env = { account: '************', region: 'ap-northeast-1' };
 
 const app = new cdk.App();
 // アプリケーションインフラストラクチャのスタック
